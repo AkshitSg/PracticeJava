@@ -12,9 +12,9 @@ public class SixWaysToPrintArrayList {
 
 //        There are 6 ways to print an array list
 
-//        6. using forEachRemaining() method java 8
         //        1. using iterator interface
-        Iterator itr= colors.iterator();
+        Iterator<String> itr;
+        itr = colors.iterator();
         while (itr.hasNext()){
             System.out.println("Colors: "+itr.next());
         }
@@ -41,8 +41,6 @@ public class SixWaysToPrintArrayList {
         Iterator itr2= colors.iterator();
         itr2.next();
         itr2.next();
-        itr2.forEachRemaining(color->{
-            System.out.println("Colors: "+color);
-        });
+        itr2.forEachRemaining(color-> System.out.println("Colors: "+color));
     }
 }
